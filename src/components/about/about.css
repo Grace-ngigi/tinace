@@ -1,0 +1,115 @@
+.container-about {
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: 55% 35%;
+    gap: 5%;
+}
+
+.about-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* .about-content{
+    margin-left: 2rem;
+    animation: content 3s ease 1 ;
+}
+@keyframes content{
+    0%{
+        font-size: 1.2rem;
+    }
+    50% {
+        font-size: 2rem;
+    }
+    100% {
+        font-size: 1.2rem;   
+    } 
+} */
+.about-content:hover {
+    transition-delay: 2s;
+
+}
+
+
+
+.blob {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    background: url(../../assets/about.png);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: blob 5s linear infinite;
+}
+
+@keyframes blob {
+
+    0%,
+    100% {
+        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    }
+
+    33% {
+        border-radius: 42% 28% 48% 48% / 28% 28% 72% 72%;
+    }
+
+    66% {
+        border-radius: 56% 42% 28% 70% / 50% 64% 45% 30%;
+    }
+}
+
+.about_cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    font-size: 1rem;
+}
+
+.about_card {
+    background: var(--color-light);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.about_icon {
+    color: var(--color-bg);
+    font-size: 1.4rem;
+}
+
+/* Medium Devices: Tablets */
+@media screen and (max-width: 1024px) {
+    .container-about {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about-content {
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* Small Devices: Mobile Devices */
+@media screen and (max-width: 600px) {
+    .container-about {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 0 1.5rem;
+    }
+
+    .about-blob {
+        display: none;
+    }
+
+    .about_cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+}

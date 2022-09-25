@@ -1,0 +1,112 @@
+#services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.service_container {
+    /* height: 100vh; */
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 6rem;
+    /* display: fle
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3rem; */
+}
+
+.service {
+    background: var(--color-white);
+    border-radius: 0 0 2rem 2rem;
+    border: 1px solid var(--color-faded-light);
+    height: fit-content;
+    transition: var(--transition);
+}
+
+.service:hover {
+    background: transparent;
+    /* border-color: var(--color-primary-variant); */
+    cursor: default;
+    color: var(--color-bg);
+    box-shadow: 5px 0 35px 0 var(--color-faded-dark);
+    transition: ease-in-out 0.5s;
+}
+
+.service_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-faded-light);
+    padding: 2rem;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 9 2rem 1rem rgda(0, 0, 0, 0.1);
+    align-items: center;
+    /* background-image: url(../../assets/design.jpg);
+    background-size: cover; */
+}
+
+.service_head h3 {
+    color: var(--color-black);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.service_head_image {
+    position: relative;
+    width: auto;
+    height: 100px;
+    /* border-radius: 10%; */
+}
+
+.service_list {
+    padding: 2rem;
+}
+
+.service_list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.list_icon {
+    color: var(--color-primary);
+}
+
+.service_list-icon {
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.service_list p {
+    font-size: 0.9rem;
+    /* color: var(--color-white); */
+}
+
+.techs {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Medium Devices: Tablets */
+@media screen and (max-width: 1024px) {
+
+    .service_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1rem;
+    }
+
+    /* .service {
+        height: auto;
+    } */
+
+
+}
+
+/* Small Devices: Mobile Devices */
+@media screen and (max-width: 600px) {
+    .service_container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

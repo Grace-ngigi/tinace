@@ -1,0 +1,60 @@
+nav {
+    background: rgba(0, 0, 0, 0.7);
+    height: 60px;
+    width: max-content;
+    padding: 0 1.7rem;
+    z-index: 2;
+    position: fixed;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-primary-variant);
+    /* font-size: 1.2rem;
+    text-transform: uppercase; */
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+nav a:active {
+    color: var(--color-primary);
+}
+
+.logo {
+    height: 45px;
+    width: 90px;
+    /* margin-top: 10px; */
+}
+
+/* Medium Devices: Tablets */
+@media screen and (max-width: 1024px) {
+    /* nav {
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 0.5rem;
+    } */
+}
+
+/* Small Devices: Mobile Devices */
+@media screen and (max-width: 600px) {
+    nav {
+        left: 10%;
+    }
+
+    nav a {
+        display: none;
+    }
+
+}
